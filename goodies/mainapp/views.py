@@ -11,3 +11,17 @@ def home(request):
         'company_name':'goodies'
     }
     return HttpResponse(template.render(context,request))
+
+def about(request):
+    template= loader.get_template('about.html')
+    context={
+
+    }
+    return HttpResponse(template.render(context,request))
+
+def contact(request):
+    template= loader.get_template('contact.html')
+    context={
+
+    }
+    return HttpResponse(template.render(context,request))
