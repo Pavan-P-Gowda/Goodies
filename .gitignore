@@ -4,6 +4,7 @@ virt/
 
 # Bytecode files
 __pycache__/
+migrations/
 *.pyc
 *.pyo
 
