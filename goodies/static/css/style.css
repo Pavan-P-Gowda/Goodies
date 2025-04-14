@@ -10,8 +10,10 @@ body{
         }
         .good{
             /* border: 1px solid white; */
+            /* background-color: aliceblue; */
             width: 400px;
             text-align: center;
+            align-items: end;
             /* margin-left: 100px; */
             font-size: xx-large;
             font-weight: bolder;
