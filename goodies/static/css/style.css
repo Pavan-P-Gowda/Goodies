@@ -3,4 +3,42 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+body{
+    header{
+        nav{
+            background-color: black;
+        }
+        .good{
+            /* border: 1px solid white; */
+            width: 400px;
+            text-align: center;
+            /* margin-left: 100px; */
+            font-size: xx-large;
+            font-weight: bolder;
+            /* color: rgb(118, 107, 48); */
+        }
+        strong{
+            color: gold;
+        }
+        form{
+            /* border: 1px solid white; */
+            /* padding-bottom: 10px; */
+            margin-bottom: 10px;
+            .sea{
+                /* border: 1px solid white; */
+                background-color:gold ;
+                color: black;
+                width: 100px;
+                border-radius: 10px;
+            }
+            .active{
+                background-color: black;
+                color: gold;
+            }
+            button:hover{
+                background-color: black;
+                color: gold;
+            }
+        }
+    }
+}
