@@ -4,13 +4,13 @@ from django.template import loader
 
 from django.http import HttpResponse
 
-from .models import Product
+from .models import Car
 
 # Create your views here.
 def home(request):
     template= loader.get_template('home.html')
     context ={
-        'products': Product.object.all()
+        'cars': Car.objects.all()
     }
     return HttpResponse(template.render(context,request))
 

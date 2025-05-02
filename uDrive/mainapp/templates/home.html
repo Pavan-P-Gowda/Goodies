@@ -5,5 +5,38 @@ U-Drive|home
 {% endblock %}
 
 {% block content %}
-this is my home page
+<div class="carousel-container">
+<div id="carouselExample" class="carousel slide w-100" data-bs-ride="carousel">
+        <div class="carousel-inner ">
+        {% for car in cars %}
+        <a href="">
+          <div class="carousel-item {% if forloop.first %}active{% endif %} pics"  data-bs-interval="5000">
+            <img src="{{car.img.url}}" class="d-block w-100" alt="pic of {{car.name}}">
+          </div>
+        </a>
+        {% endfor %}
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <section id="car-body">
+        <div class="cars-container">
+            {% for car in cars %}
+            <div class="card">
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+      </section>
+</div>
 {% endblock %}
