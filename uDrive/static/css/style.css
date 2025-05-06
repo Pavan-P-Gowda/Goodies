@@ -7,6 +7,7 @@ body{
     header{
         nav{
             background-color: black;
+            
         }
         .good{
             /* border: 1px solid white; */
@@ -38,10 +39,10 @@ body{
                 background-color: black;
                 color: gold;
             }
-            button:hover{
+            /* button:hover{
                 background-color: black;
                 color: gold;
-            }
+            } */
         }
     }
     main {
@@ -61,5 +62,75 @@ body{
                 }
             }
         }
+        /* home card templete start */
+        #car-body{
+            .cars-container{
+                /* box-shadow: 2px 2px 2px 1px gold; */
+                display: flex;
+                align-items: center;
+                margin-bottom: 12px;
+                padding-bottom: 12px;
+                margin-left: 50px;
+                .card{
+                    box-shadow: 2px 2px 2px 1px rgb(145, 129, 40);
+                    border-radius: 0px 5px ;
+                    .row{
+                        height: 50%;
+                        overflow: hidden;
+                        padding: 0;
+                        img{
+                            height: 150px;
+                            object-fit: cover;
+                            padding: 0;
+                        }
+                    }
+                    .card-body{
+                        h5{
+                            a{
+                                text-decoration: none;
+                                color: black;
+                            }
+                            .active{
+                                color: gold;
+                            }
+                            a:hover{
+                                color: gold;
+                            }
+                        }
+                        .card-price{
+                            font-size: larger;
+                        }
+                        .card-see{
+                            a{
+                                text-decoration: none;
+                                color: black;
+                            }
+                            .active{
+                                color: gold;
+                            }
+                            a:hover{
+                                color: gold;
+                            }
+                        }
+                    }
+                    a.btn{
+                        /* width: 50%; */
+                        margin-bottom: 3px;
+                        margin-left: 50px;
+                        margin-right: 50px;
+                        border-radius: 5px;
+                    }
+                    .active{
+                        background-color: black;
+                        color: gold;
+                    }
+                    /* a:hover{
+                        background-color: black;
+                        color: gold;
+                    } */
+                }
+            }
+        }
+        /*  home card templet ends */
     }
 }

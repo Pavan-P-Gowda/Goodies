@@ -5,9 +5,9 @@ U-Drive|home
 {% endblock %}
 
 {% block content %}
-<div class="carousel-container">
-<div id="carouselExample" class="carousel slide w-100" data-bs-ride="carousel">
-        <div class="carousel-inner ">
+  <div class="carousel-container">
+    <div id="carouselExample" class="carousel slide w-100" data-bs-ride="carousel">
+      <div class="carousel-inner ">
         {% for car in cars %}
         <a href="">
           <div class="carousel-item {% if forloop.first %}active{% endif %} pics"  data-bs-interval="5000">
@@ -30,13 +30,30 @@ U-Drive|home
       <section id="car-body">
         <div class="cars-container">
             {% for car in cars %}
-            <div class="card">
-
+            <div class=" col-sm-2 card text-center mx-3 my-3 px-0 ">
+              <div class="row h-50 w-100 px-0 mx-0">
+                <a href="">
+                  <img class="w-100" src="{{car.img.url}}" alt="picture of {{car.name}}">
+                </a>
+              </div>
+              <div class="row card-body h-50">
+                <h5>
+                  <a href="">{{car.name}} </a>
+                </h5>
+                <p class="card-price">
+                  Rs.{{car.price}}
+                </p>
+                <p class="card-see">
+                  <a href="">See More..</a>
+                </p>
+              </div>
+              <a href="" class="btn btn-warning  center">Buy for rent</a>
             </div>
 
             {% endfor %}
 
         </div>
       </section>
-</div>
+    </div>
+  <div>
 {% endblock %}
