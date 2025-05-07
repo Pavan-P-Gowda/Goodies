@@ -28,13 +28,13 @@
                 <div class="offcanvas-body">
                   <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                      <a class="nav-link " aria-current="page" href="{% url 'homepage' %}">Home</a>
+                      <a class="nav-link {% if current_page == 'home' %} text-warning {% endif %}" aria-current="page" href="{% url 'homepage' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link " aria-current="page" href="{% url 'aboutpage' %}">About</a>
+                      <a class="nav-link {% if current_page == 'about' %} text-warning {% endif %}" aria-current="page" href="{% url 'aboutpage' %}">About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="{% url 'contactpage' %}">Contact</a>
+                      <a class="nav-link {% if current_page == 'contact' %} text-warning {% endif %}" href="{% url 'contactpage' %}">Contact</a>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -53,6 +53,7 @@
                 </div>
               </div>
               <a class="navbar-brand good " href="{% url 'homepage' %}"><strong>U</strong>-Drive</a>
+              <!-- <a href="">logout</a> -->
               <form class="d-flex mt-3 sele" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class=" sea" type="submit">Search</button>

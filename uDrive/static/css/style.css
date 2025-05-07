@@ -65,8 +65,11 @@ body{
         /* home card templete start */
         #car-body{
             .cars-container{
-                /* box-shadow: 2px 2px 2px 1px gold; */
+                /* display: grid;
+                width: 100%;
+                grid-template-columns: 300px 300px 300px 300px; */
                 display: flex;
+                flex-wrap: wrap;
                 align-items: center;
                 margin-bottom: 12px;
                 padding-bottom: 12px;
@@ -74,6 +77,8 @@ body{
                 .card{
                     box-shadow: 2px 2px 2px 1px rgb(145, 129, 40);
                     border-radius: 0px 5px ;
+                    width: 250px;
+                    height: 300px;
                     .row{
                         height: 50%;
                         overflow: hidden;

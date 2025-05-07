@@ -9,7 +9,7 @@ U-Drive|home
     <div id="carouselExample" class="carousel slide w-100" data-bs-ride="carousel">
       <div class="carousel-inner ">
         {% for car in cars %}
-        <a href="">
+        <a href="{% url 'car_detail' car.id %}">
           <div class="carousel-item {% if forloop.first %}active{% endif %} pics"  data-bs-interval="5000">
             <img src="{{car.img.url}}" class="d-block w-100" alt="pic of {{car.name}}">
           </div>
@@ -32,19 +32,19 @@ U-Drive|home
             {% for car in cars %}
             <div class=" col-sm-2 card text-center mx-3 my-3 px-0 ">
               <div class="row h-50 w-100 px-0 mx-0">
-                <a href="">
+                <a href="{% url 'car_detail' car.id %}">
                   <img class="w-100" src="{{car.img.url}}" alt="picture of {{car.name}}">
                 </a>
               </div>
               <div class="row card-body h-50">
                 <h5>
-                  <a href="">{{car.name}} </a>
+                  <a href="{% url 'car_detail' car.id %}">{{car.name}} </a>
                 </h5>
                 <p class="card-price">
                   Rs.{{car.price}}
                 </p>
                 <p class="card-see">
-                  <a href="">See More..</a>
+                  <a href="{% url 'car_detail' car.id %}">See More..</a>
                 </p>
               </div>
               <a href="" class="btn btn-warning  center">Buy for rent</a>
