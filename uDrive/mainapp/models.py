@@ -13,7 +13,8 @@ class Car(models.Model):
                             ),
                             default='petrol'
                             )
-
+    desc = models.CharField(max_length=200, default='')
+    caption = models.CharField(max_length=200, default='')
 
     def __str__(self):
          return f"car : {self.name}"
