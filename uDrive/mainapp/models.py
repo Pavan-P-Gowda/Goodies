@@ -13,6 +13,9 @@ class Car(models.Model):
                             ),
                             default='petrol'
                             )
+    transmission = models.CharField(max_length=50, default='Manual')
+    seat = models.CharField(max_length=50, default='5 seater')
+    year = models.IntegerField(default=2000)
     desc = models.CharField(max_length=200, default='')
     caption = models.CharField(max_length=200, default='')
 
