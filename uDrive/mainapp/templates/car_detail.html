@@ -1,24 +1,52 @@
 {% extends 'base.html' %}
 
 {% block title %}
-U-Drive|home
+U-Drive|Details
 {% endblock %}
 
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <table>
-            <div class="col">
-                <img src="{{car.img.url}}" class="w-50 h-60" alt="">
-                <td> fuel :{{car.fuel}}</td>
-                <th>{{car.fuel}}</th>
-                <th>{{car.fuel}}</th>
-            </div>
-            <div class="col">
-             
-            </div>
-        </table>
+<div class="detail-container">
+    <div class="detaol-row">
+        <div class="detail-col">
+            <img src="{{car.img.url}}"  alt="">
+            <table class="detail-table">
+                <tr>
+                    <th>Name</th>
+                    <td>{{car.name}} </td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td> Rs.{{car.price}} </td>
+                </tr>
+                <tr>
+                    <th>Fuel</th>
+                    <td>{{car.fuel}} </td>
+                </tr>
+                <tr>
+                    <th>Desc</th>
+                    <td>{{car.desc}} </td>
+                </tr>
+                <tr>
+                    <th>Driving Type</th>
+                    <td>{{car.transmission}} </td>
+                </tr>
+                <tr>
+                    <th>Seat</th>
+                    <td>{{car.seat}} </td>
+                </tr>
+                <tr>
+                    <th>MOY</th>
+                    <td>{{car.year}} </td>
+                </tr>
+            </table>
+            <p class="detail-button">
+                <a href="" class="btn btn-secondary  center">Edit cars</a>
+                <a href="" class="btn btn-danger center">Delet</a>
+                <a href="" class="btn btn-warning  center ">But for rent</a>
+            </p>
+        </div>
+        
     </div>
 
 </div>
