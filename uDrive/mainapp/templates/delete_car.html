@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+Delete Car
+{% endblock %}
+{% block content %}
+<h2 class="del-del">
+    <b>Journey </b> ended : <span class="text-danger">{{car.name}}</span>
+</h2>
+<div class="del-car">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-danger">Delete Conform</button>
+    </form>
+    <a href="{% url 'car_detail' car.pk %}" class="btn btn-success ">No, keep it</a>
+</div>
+
+
+{% endblock %}

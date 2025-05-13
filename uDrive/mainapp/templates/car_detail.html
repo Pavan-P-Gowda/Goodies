@@ -41,8 +41,8 @@ U-Drive|Details
                 </tr>
             </table>
             <p class="detail-button">
-                <a href="" class="btn btn-secondary  center">Edit cars</a>
-                <a href="" class="btn btn-danger center">Delete </a>
+                <a href="{% url 'car_edit' car.pk  %}" class="btn btn-secondary  center">Edit cars</a>
+                <a href="{% url 'delete_car' car.pk %}" class="btn btn-danger center">Delete </a>
                 <a href="" class="btn btn-warning  center ">Rent</a>
             </p>
         </div>

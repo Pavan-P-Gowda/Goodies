@@ -12,23 +12,17 @@ body{
          
         }
         .good{
-            /* border: 1px solid white; */
-            /* background-color: aliceblue; */
             width: 400px;
             text-align: center;
             align-items: end;
-            /* margin-left: 100px; */
             font-size: xx-large;
             font-weight: bolder;
-            /* color: rgb(118, 107, 48); */
         }
         strong{
             color: gold;
 
         }
         form{
-            /* border: 1px solid white; */
-            /* padding-bottom: 10px; */
             margin-bottom: 10px;
             .sea{
                 /* border: 1px solid white; */
@@ -64,6 +58,7 @@ body{
                 }
                 .carousel-caption{
                     text-shadow: 4px 4px 10px black;
+                
                 }
             }
         }
@@ -101,7 +96,6 @@ body{
                         h5{
                             height: 30px;
                             padding: 2px;
-                            /* background-color: rgb(252, 252, 252); */
                             a{
                                 text-decoration: none;
                                 color: white;
@@ -136,10 +130,6 @@ body{
                         }
                     }
                     a.btn{
-                        /* width: 50%; */
-                        /* margin-bottom: 3px;
-                        margin-left: 50px;
-                        margin-right: 50px; */
                         border-radius: 5px;
                         width: 50%;
                         margin: auto;
@@ -157,11 +147,8 @@ body{
             .detaol-row{
                 justify-items: center;
                 .detail-col{
-                    /* margin-top: 10px; */
-                    /* border: 5px solid black; */
                     width: 800px;
                     height: 500px;
-                    /* box-shadow: 2px 2px 2px 1px rgb(145, 129, 40); */
                     border-radius: 5px ;
                     img{
                         margin-top: 14px;
@@ -171,13 +158,10 @@ body{
                     }
                     .detail-table{
                        width: 800px;
-                       /* box-shadow: 2px 2px 2px 1px rgb(145, 129, 40); */
-                       /* margin-top: 15px; */
                        background-color: rgb(198, 194, 194);
                         th,td{
                             border: 2px solid rgb(139, 139, 139);
                             padding: 5px;
-                            /* color: white; */
                         }
                         
                     }
@@ -193,7 +177,56 @@ body{
                 }
             }
         }
-        /* car detail temple end */
+        /* car detail template end */
+
+        /* car add and edit template  start*/
+        .add-wel{
+            padding: 25px;
+            text-align: center;
+            /* border: 1px solid black; */
+            height: 80px;
+            text-shadow: 4px 4px 10px rgb(145, 129, 40);
+        }
+        .add-car{
+            /* border: 1px solid black; */
+            background-color: black;
+            box-shadow: 2px 2px 2px 1px rgb(145, 129, 40);
+            border-radius: 0px 5px;
+            height: auto;
+            width: 23%;
+            margin: auto;
+            justify-items: center;
+            .add-form{
+                color: white;
+                /* margin-top: 70px; */
+                padding: auto;
+            }
+            button.btn{
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+        /* car add and edit template edns */
+        /* car delete template starts */
+        .del-del{
+            /* border: 1px solid black; */
+            /* margin: auto; */
+            padding: 20px;
+            height: 60px;
+            text-align: center;
+            text-shadow: 4px 4px 10px rgb(145, 129, 40);
+        }
+        .del-car{
+            /* border: 1px solid black; */
+            height: 50px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+        }
+
+        /* car delete template ends */
     }
 }
 

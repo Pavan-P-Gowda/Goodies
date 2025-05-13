@@ -5,7 +5,7 @@ from django.template import loader
 from django.http import HttpResponse
 
 from .models import Car
-from django.views.generic import DetailView
+from django.views.generic import DetailView, DeleteView, UpdateView,CreateView
 
 # Create your views here.
 def home(request):
@@ -34,3 +34,21 @@ def contact(request):
 class CarDetails(DetailView):
     template_name = 'car_detail.html'
     model = Car
+
+class AddCar(CreateView):
+    model = Car
+    template_name = "add_car.html"
+    fields = '__all__'
+    success_url = '/'
+
+class CarEdit(UpdateView):
+    model = Car
+    context_object_name = 'car'
+    template_name = "car_edit.html"
+    fields = ['img','price','fuel','transmission']
+    success_url = '/'
+
+class CarDelete(DeleteView):
+    model = Car
+    template_name = 'delete_car.html'
+    success_url = '/'
