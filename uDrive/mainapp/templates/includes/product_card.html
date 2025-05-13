@@ -1,0 +1,21 @@
+<div class="col-sm-2 card text-center mx-3 my-3 px-0 border-alternate">
+              <div class="row h-50 w-100 px-0 mx-0" >
+                <a href="{% url 'car_detail' car.id %}" class="w-100 px-0">
+                  <img class="w-100" src="{{car.img.url}}" alt="picture of {{car.name}}">
+                </a>
+              </div>
+              <div class="row card-body h-50">
+                <h5>
+                  <a href="{% url 'car_detail' car.id %}">{{car.name}} </a>
+                </h5>
+                <p class="card-price">
+                  &#8377; {{car.price|floatformat:2 }}
+                </p>
+                <p class="card-see">
+                  <a href="{% url 'car_detail' car.id %}">View Detail</a>
+                </p>
+
+                <a href="" class="btn btn-warning  center ">Rent</a>
+              </div>
+              
+            </div>

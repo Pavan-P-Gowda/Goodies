@@ -5,9 +5,11 @@
 }
 body{
     header{
+
         nav{
             background-color: black;
-            
+            opacity: 95%;
+         
         }
         .good{
             /* border: 1px solid white; */
@@ -47,7 +49,7 @@ body{
     }
     main {
         width: 100%;
-        margin-top: 60px;
+        margin-top: 48px;
         .carousel-container{
             .pics{
                 margin-top: 15px;
@@ -74,18 +76,18 @@ body{
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
-                margin-bottom: 12px;
-                padding-bottom: 12px;
-                margin-left: 50px;
+                justify-content: space-between;
+                margin-bottom: 25px;
                 .card{
                     box-shadow: 2px 2px 2px 1px rgb(145, 129, 40);
-                    border-radius: 0px 5px ;
+                    background-color: black;
                     width: 250px;
                     height: 300px;
                     .row{
                         height: 50%;
                         overflow: hidden;
                         padding: 0;
+                        /* border: 1px solid red; */
                         img{
                             height: 150px;
                             object-fit: cover;
@@ -93,10 +95,16 @@ body{
                         }
                     }
                     .card-body{
+                        display: flex;
+                        flex-direction: column;
+                        
                         h5{
+                            height: 30px;
+                            padding: 2px;
+                            /* background-color: rgb(252, 252, 252); */
                             a{
                                 text-decoration: none;
-                                color: black;
+                                color: white;
                             }
                             .active{
                                 color: gold;
@@ -107,11 +115,17 @@ body{
                         }
                         .card-price{
                             font-size: larger;
+                            height: 10px;
+                            color: white;
+                            margin-bottom: 20px;
                         }
                         .card-see{
                             a{
                                 text-decoration: none;
-                                color: black;
+                                color: white;
+                                height: 10px;
+                                /* border: 1px solid gold; */
+                                margin: auto;
                             }
                             .active{
                                 color: gold;
@@ -123,10 +137,12 @@ body{
                     }
                     a.btn{
                         /* width: 50%; */
-                        margin-bottom: 3px;
+                        /* margin-bottom: 3px;
                         margin-left: 50px;
-                        margin-right: 50px;
+                        margin-right: 50px; */
                         border-radius: 5px;
+                        width: 50%;
+                        margin: auto;
                     }
                     .active{
                         background-color: black;
@@ -135,34 +151,39 @@ body{
                 }
             }
         }
-        /*  home card templet ends */
-        /* car detali templet start */
+        /*  home card template ends */
+        /* car detail template start */
         .detail-container{
             .detaol-row{
                 justify-items: center;
                 .detail-col{
-                    margin-top: 10px;
+                    /* margin-top: 10px; */
+                    /* border: 5px solid black; */
                     width: 800px;
                     height: 500px;
                     /* box-shadow: 2px 2px 2px 1px rgb(145, 129, 40); */
                     border-radius: 5px ;
                     img{
-
+                        margin-top: 14px;
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
                     }
                     .detail-table{
-                       width: 799px;
+                       width: 800px;
                        /* box-shadow: 2px 2px 2px 1px rgb(145, 129, 40); */
+                       /* margin-top: 15px; */
+                       background-color: rgb(198, 194, 194);
                         th,td{
-                            border: 2px solid black;
-                            border-radius: 5px;
-                            padding-bottom: 5px;
+                            border: 2px solid rgb(139, 139, 139);
+                            padding: 5px;
+                            /* color: white; */
                         }
                         
                     }
                     .detail-button{
+                        display: flex;
+                        justify-content: space-around;
                         a{
                             margin-bottom: 40px;
                             width: 160px;
@@ -175,3 +196,9 @@ body{
         /* car detail temple end */
     }
 }
+
+.border-alternate {
+    border-radius: 0px 10px ;
+    overflow: hidden;
+}
+
