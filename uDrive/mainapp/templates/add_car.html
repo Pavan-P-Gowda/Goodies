@@ -7,11 +7,18 @@ Add car
 <h2 class="add-wel">
     Ready to add more? Your perfect set is just a few clicks away
 </h2>
-<div class="add-car">
-    <form class="add-form" method="post" enctype="multipart/form-data">
+<div class="ad-car">
+    <form class="add-form add-new" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{form.as_p}}
-        <button  type="submit" class="btn btn-warning">Add</button>
+        {% for field in form %}
+        <div class="form-field form-control bg-dark text-light add-newd">
+            <label for="{{field.name}}" class="label">{{field.name}}</label>
+            <label for="{{field.price}}" class="label">{{field.price}}:</label>
+            <label for="{{field.img}}" class="label">{{field.img}}:</label>
+            {{field}}
+        </div>
+        {% endfor %}
+        <button  type="submit" class="btn btn-warning w-100">Add</button>
 
     </form>
 </div>

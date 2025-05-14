@@ -7,6 +7,7 @@ from django.http import HttpResponse
 from .models import Car
 from django.views.generic import DetailView, DeleteView, UpdateView,CreateView
 
+from .forms import CarForm
 # Create your views here.
 def home(request):
     template= loader.get_template('home.html')
@@ -38,7 +39,7 @@ class CarDetails(DetailView):
 class AddCar(CreateView):
     model = Car
     template_name = "add_car.html"
-    fields = '__all__'
+    form_class = CarForm
     success_url = '/'
 
 class CarEdit(UpdateView):

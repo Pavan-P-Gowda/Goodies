@@ -179,7 +179,7 @@ body{
         }
         /* car detail template end */
 
-        /* car add and edit template  start*/
+        /* car edit template  start*/
         .add-wel{
             padding: 25px;
             text-align: center;
@@ -206,7 +206,7 @@ body{
                 margin-bottom: 5px;
             }
         }
-        /* car add and edit template edns */
+        /* car  edit template edns */
         /* car delete template starts */
         .del-del{
             /* border: 1px solid black; */
@@ -227,6 +227,25 @@ body{
         }
 
         /* car delete template ends */
+        /* car add template starts */
+        .ad-car{
+            width: 24%;
+            /* border: 1px solid black; */
+            /* display: flex; */
+            /* flex-direction: row; */
+            /* margin: auto; */
+            .add-new{
+                display: flex;
+                flex-wrap: wrap;
+                /* flex-direction: row; */
+                .add-newd{
+                    /* display: flex; */
+                    /* flex-direction: row; */
+                }
+            }
+        }
+        /* car add templete ends */
+
     }
 }
 
