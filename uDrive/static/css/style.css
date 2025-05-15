@@ -12,8 +12,8 @@ body{
          
         }
         .good{
-            width: 400px;
-            text-align: center;
+            /* border: 1px solid white; */
+            margin: auto;
             align-items: end;
             font-size: xx-large;
             font-weight: bolder;
@@ -22,8 +22,30 @@ body{
             color: gold;
 
         }
+        .log-in{
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            margin-right: 5px;
+            margin-top: 5px;
+            padding: 2px;
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            font-weight: 500;
+            a.active{
+                background: white;
+                color: gold;
+            }
+            a:hover{
+                background: white;
+                color: gold;
+            }
+        }
+        
         form{
             margin-bottom: 10px;
+            /* border: 1px solid white; */
             .sea{
                 /* border: 1px solid white; */
                 background-color:gold ;
@@ -150,11 +172,13 @@ body{
                     width: 1000px;
                     height: 500px;
                     border-radius: 5px ;
+                    
                     img{
                         margin-top: 14px;
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
+                    
                     }
                     .detail-table{
                        /* width: 800px; */
@@ -208,6 +232,7 @@ body{
             }
         }
         /* car  edit template edns */
+        
         /* car delete template starts */
         .del-del{
             /* border: 1px solid black; */
@@ -252,6 +277,35 @@ body{
             }
         }
         /* car add templete ends */
+
+        /* car login templete start */
+        .log-container{
+            margin: auto;
+            box-shadow: 2px 2px 2px 1px rgb(145, 129, 40) ;
+            border-radius: 5px;
+            overflow: hidden;
+            width: 300px;
+            margin-top: 120px;
+            .log-card{
+                padding: 10px;
+                /* margin: auto; */
+                width: 300px;
+                background: black;
+                .log-text{
+                    color: white;
+                }
+                .log-name{
+                    color: white;
+                }
+                a{
+                    color: white;
+                }
+                .btn{
+                    width: 100%;
+                }
+            }
+        }
+        /* car lgoin templete end */
 
     }
 }

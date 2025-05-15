@@ -39,6 +39,7 @@
                     <li class="nav-item">
                       <a class="nav-link" href="{% url 'add_car' %}">Add Cars</a>
                     </li>
+                    <li class="nva-item">
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Dropdown
@@ -56,7 +57,7 @@
                 </div>
               </div>
               <a class="navbar-brand good " href="{% url 'homepage' %}"><strong>U</strong>-Drive</a>
-              <!-- <a href="">logout</a> -->
+              <a class="nav-link  log-in" aria-current="page" href="{% url 'signin' %}">Login</a>
               <form class="d-flex mt-3 sele" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class=" sea" type="submit">Search</button>
