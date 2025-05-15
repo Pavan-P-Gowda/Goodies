@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from .models import Car
 from django.views.generic import DetailView, DeleteView, UpdateView,CreateView
 
-from .forms import CarForm
+from .forms import CarForm, EditForm
 # Create your views here.
 def home(request):
     template= loader.get_template('home.html')
@@ -46,7 +46,7 @@ class CarEdit(UpdateView):
     model = Car
     context_object_name = 'car'
     template_name = "car_edit.html"
-    fields = ['img','price','fuel','transmission']
+    form_class = EditForm
     success_url = '/'
 
 class CarDelete(DeleteView):

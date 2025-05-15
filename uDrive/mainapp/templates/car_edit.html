@@ -7,12 +7,16 @@ Edit car
 <h2 class="add-wel">
     Welcome! Ready to make some changes
 </h2>
-<div class="add-car">
-    <form class="add-form" method="post" enctype="multipart/form-data">
+<div class="ad-car">
+    <form class="add-form add-new" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{form.as_p}}
-        <button  type="submit" class="btn btn-warning">Edit</button>
-
+        {% for field in form %}
+        <div class="form-field form-control bg-dark  text-light add-newd row">
+            <label for="{{field.name}}" class="label col-sm-0 px-2 ">{{field.name}}:</label>
+            {{field}}
+        </div>
+        {% endfor %}
+        <button  type="submit" class="btn btn-warning w-100">Add</button>
     </form>
 </div>
 {% endblock %}

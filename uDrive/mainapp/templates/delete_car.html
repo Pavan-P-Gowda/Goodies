@@ -10,7 +10,7 @@ Delete Car
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p}}
-        <button type="submit" class="btn btn-danger">Delete Conform</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
     </form>
     <a href="{% url 'car_detail' car.pk %}" class="btn btn-success ">No, keep it</a>
 </div>

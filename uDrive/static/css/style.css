@@ -147,7 +147,7 @@ body{
             .detaol-row{
                 justify-items: center;
                 .detail-col{
-                    width: 800px;
+                    width: 1000px;
                     height: 500px;
                     border-radius: 5px ;
                     img{
@@ -157,11 +157,12 @@ body{
                         object-fit: cover;
                     }
                     .detail-table{
-                       width: 800px;
-                       background-color: rgb(198, 194, 194);
+                       /* width: 800px; */
+                       /* background-color: rgb(198, 194, 194); */
                         th,td{
                             border: 2px solid rgb(139, 139, 139);
                             padding: 5px;
+                            color: white;
                         }
                         
                     }
@@ -170,7 +171,7 @@ body{
                         justify-content: space-around;
                         a{
                             margin-bottom: 40px;
-                            width: 160px;
+                            width: 300px;
                             margin-top: 5px;
                         }
                     }
@@ -229,18 +230,24 @@ body{
         /* car delete template ends */
         /* car add template starts */
         .ad-car{
-            width: 24%;
+            width: 30%;
             /* border: 1px solid black; */
             /* display: flex; */
             /* flex-direction: row; */
-            /* margin: auto; */
+            box-shadow:3px 3px 2px 3px rgb(145, 129, 40) ;
+            border-radius:  5px;
+            margin: auto;
             .add-new{
                 display: flex;
                 flex-wrap: wrap;
                 /* flex-direction: row; */
                 .add-newd{
-                    /* display: flex; */
-                    /* flex-direction: row; */
+                    margin: auto;
+                    display: flex;
+                    flex-direction: row;
+                    .lable{
+                        margin: auto;
+                    }
                 }
             }
         }
