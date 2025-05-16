@@ -36,6 +36,14 @@
                     <li class="nav-item">
                       <a class="nav-link {% if current_page == 'contact' %} text-warning {% endif %}" href="{% url 'contactpage' %}">Contact</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                      <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="nav-link text-white">Logout</button>
+                      </form>
+                    </li>
+                    {% endif %}
                     <li class="nav-item">
                       <a class="nav-link" href="{% url 'add_car' %}">Add Cars</a>
                     </li>
@@ -57,7 +65,11 @@
                 </div>
               </div>
               <a class="navbar-brand good " href="{% url 'homepage' %}"><strong>U</strong>-Drive</a>
-              <a class="nav-link  log-in" aria-current="page" href="{% url 'signin' %}">Login</a>
+              {% if not user.is_authenticated %}
+
+              <a class="nav-link btn log-in text-light" aria-current="page" href="{% url 'signin' %}">Login</a>
+              {% endif %}
+
               <form class="d-flex mt-3 sele" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class=" sea" type="submit">Search</button>

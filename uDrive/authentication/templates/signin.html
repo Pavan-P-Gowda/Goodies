@@ -13,19 +13,22 @@ Login
             {% csrf_token %}
             {% for field in form %}
             <div class="mb-3">
-                <div class="log-name"><strong>{{ field.name }}:</strong></div>
-                <label for="{{field.id_for_lable}}" class="form-lable">{{field.lable}}</label>
+                <!-- <div class="log-name"><strong>{{ field.name }}:</strong></div> -->
+                <label for="{{field.id_for_label}}" class="form-label text-light">{{field.label}}</label>
                 {{field}}
-                {% if field.error %}
+                {% if field.errors %}
                 <div class="text-danger small">
-                    {{field.error | striptags}}
+                    {{field.errors | striptags}}
                 </div>
                 {% endif %}
             </div>
-            {% endfor %}
+                {% endfor %}
+                {% if form.non_field_errors %}
+                <div class="text-info">{{ form.non_field_errors }}</div>
+                {% endif %}
             <div>
                 <h6 class="log-text">
-                    New Register?
+                    New here?
                 <a href="{% url 'signup'%}">Sign up</a>
                 </h6>
             </div>

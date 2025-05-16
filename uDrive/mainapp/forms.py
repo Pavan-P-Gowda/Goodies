@@ -28,7 +28,7 @@ class EditForm(forms.ModelForm):
         model = Car
         fields = ['img','price','fuel','transmission']
         widgets = {
-            'img' : forms.ClearableFileInput(attrs={'class':'form-class col-sm-15'}),
+            'img' : forms.FileInput(attrs={'class':'form-class col-sm-15'}),
             'price' : forms.NumberInput(attrs={'class': 'form-class col-sm-9','placeholder': 'Enter car price'}),
             'fuel' : forms.Select(attrs={'class':'form-class col-sm-9'}),
             'transmission' : forms.TextInput(attrs={'class': 'form-class col-sm-9'}),

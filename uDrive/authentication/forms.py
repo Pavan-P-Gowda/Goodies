@@ -17,17 +17,17 @@ class CustomLogin(AuthenticationForm):
 class CustomRegister(UserCreationForm):
     class Meta:
         model = User
-        fields = ('username','password','confirmpassword')
+        fields = UserCreationForm.Meta.fields
+        
 
     username = forms.CharField(
-        label= 'Paaword',
         widget= forms.TextInput(attrs={'class':'form-control','placeholder':'Enter your name'})
     )
-    password = forms.CharField(
-        label= 'Paaword',
+    password1 = forms.CharField(
+        label= 'Password',
         widget= forms.PasswordInput(attrs={'class':'form-control','placeholder':'Enter your password'})
     )
-    confirmpassword = forms.CharField(
+    password2 = forms.CharField(
         label= 'Confirm password',
         widget= forms.PasswordInput(attrs={'class':'form-control','placeholder':' Confirm password'})
     )
