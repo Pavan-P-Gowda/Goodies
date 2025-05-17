@@ -4,36 +4,42 @@
 Login
 {% endblock %}
 {% block content %}
-<div class="log-container d-block justify-content-center align-items-center min-vh-80">
-    <div class="log-card  ">
-        <h2 class=" log-text mb-4 text-center ">
-            Log In 
-        </h2>
-        <form method="post">
-            {% csrf_token %}
-            {% for field in form %}
-            <div class="mb-3">
+<div class="log-img">
+    <img src="{% static 'image/carouasel/img.jpg' %}" alt="Logo" >
+    <div class="log-container d-block justify-content-center align-items-center min-vh-80">
+    
+        <div class="log-card  ">
+            <h2 class=" log-text mb-4 text-center ">
+                Log In 
+            </h2>
+            <form method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="mb-3">
                 <!-- <div class="log-name"><strong>{{ field.name }}:</strong></div> -->
-                <label for="{{field.id_for_label}}" class="form-label text-light">{{field.label}}</label>
-                {{field}}
-                {% if field.errors %}
-                <div class="text-danger small">
-                    {{field.errors | striptags}}
+                    <label for="{{field.id_for_label}}" class="form-label text-light">{{field.label}}</label>
+                    {{field}}
+                    {% if field.errors %}
+                    <div class="text-danger small">
+                        {{field.errors | striptags}}
+                    </div>
+                    {% endif %}
                 </div>
-                {% endif %}
-            </div>
-                {% endfor %}
-                {% if form.non_field_errors %}
+                    {% endfor %}
+                    {% if form.non_field_errors %}
                 <div class="text-info">{{ form.non_field_errors }}</div>
-                {% endif %}
-            <div>
-                <h6 class="log-text">
-                    New here?
-                <a href="{% url 'signup'%}">Sign up</a>
-                </h6>
-            </div>
-            <button type="submit" class="btn btn-warning center">Login</button>
-        </form>
+                    {% endif %}
+                    <div>
+                        <h6 class="log-text">
+                        New here?
+                        <a href="{% url 'signup'%}">Sign up</a>
+                        </h6>
+                    </div>
+                <button type="submit" class="btn btn-warning center">Login</button>
+            </form>
+        </div>
     </div>
+
 </div>
+
 {% endblock %}
