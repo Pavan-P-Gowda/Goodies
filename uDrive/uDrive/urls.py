@@ -26,6 +26,7 @@ urlpatterns = [
     path('', include ('mainapp.urls')),
     path('accounts/',include('authentication.urls')),
     path('accounts/',include('django.contrib.auth.urls')),
+    path('rent/',include('rent.urls')),
 ]
 
 if settings.DEBUG == True:
