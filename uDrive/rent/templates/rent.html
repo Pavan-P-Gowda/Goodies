@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{user.username}}'s rent
+{% endblock %}
+{%  block content %}
+<h2>Your Cart</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Thumbnail</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Sub Total</th>
+            <th></th>
+        </tr>
+    </thead>
+{% if items %}
+    {% for item in items %}
+        <tr id="rent-item-{{item.id}}">
+            <td>{{ item.car.name }}</td>
+            <td>{{ item.start_date }}</td>
+            <td>{{ item.end_date }}</td>
+            <td>{{ item.car.price}}</td>
+            <td>${{ item.total_price }}</td>
+            <td>
+                <a href="">Edit</a> 
+                <a href="">Remove</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+    <p>Total: ${{ total }}</p>
+    <a href="">Proceed to Checkout</a>
+{% else %}
+    <p>Your cart is empty.</p>
+{% endif %}
+
+
+{% endblock %}
