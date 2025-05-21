@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="rent_cart_container">
+
+    <div class="row border">
+        <div class="col">
+            Current car : {{curr_car.car.name}}
+
+            <a href="{% url 'rentcart' curr_car.car.id %}" class="btn btn-primary">Drive this</a>
+
+        </div>
+        <div class="col">
+            Replace with : {{new_car.name}}
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit">Replace</button>
+            </form>
+        </div>
+
+    </div>
+
+</div> 
+
+{% endblock %}

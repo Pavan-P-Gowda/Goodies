@@ -60,11 +60,11 @@ body{
     }
     main {
         width: 100%;
-        margin-top: 48px;
+        margin-top: 50px;
         margin-bottom: 35px;
         .carousel-container{
             .pics{
-                margin-top: 15px;
+                margin-top: 14px;
                 border: 1px solid black;
                 height: 500px;
                 width: 100%;
@@ -342,6 +342,12 @@ body{
         }
         /* car lgoin templete end */
 
+        .rent_cart_container{
+            margin-top: 70px;
+            /* background-color: black; */
+            min-height: 80vh;
+
+        }
     }
 }
 
