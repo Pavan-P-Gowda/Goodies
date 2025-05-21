@@ -2,33 +2,39 @@
 {% load static %}
 
 {% block title %}
-{{ user.username }}'s Rent Cart
+{{ item.car.name }} Rent Cart
 {% endblock %}
 
 {% block content %}
 <div class="rent_cart_container">
-    <h1>Confirm Your Rental</h1>
+  <h1 class="rent-head">Confirm Your Rental</h1>
 
-    {% if error_message %}
-        <p style="color: red;">{{ error_message }}</p>
-    {% endif %}
+  {% if error_message %}
+    <p style="color: red;">{{ error_message }}</p>
+  {% endif %}
+  <img src="{{form.img.initial.url}}"  class="bg-white" alt="car pic" >
+  <div class="rent-row">
+  <p><strong>Car:</strong> {{ item.car.name }}</p>
+  <p><strong>Price per day:</strong> ₹{{ price_per_day }}</p>
+  </div>
+  
 
-    <p><strong>Car:</strong> {{ item.car.name }}</p>
-    <p><strong>Price per day:</strong> ₹{{ price_per_day }}</p>
+  <form method="post" class="rent-form">
+    {% csrf_token %}
+    <div class="rent-lable">
+      <label for="start_date">Start Date:</label><br>
+      <input class="rent-input" type="date" id="start_date" name="start_date" required min="{{ today }}"><br><br>
 
-    <form method="post">
-        {% csrf_token %}
-
-        <label for="start_date">Start Date:</label><br>
-        <input type="date" id="start_date" name="start_date" required min="{{ today }}"><br><br>
-
-        <label for="end_date">End Date:</label><br>
-        <input type="date" id="end_date" name="end_date" required min="{{ today }}"><br><br>
-
-        <p><strong>Total Price:</strong> ₹<span id="total_price">0.00</span></p>
-
-        <button type="submit">Confirm Booking</button>
-    </form>
+      <label for="end_date">End Date:</label><br>
+      <input class="rent-input" type="date" id="end_date" name="end_date" required min="{{ today }}"><br><br>
+    </div>
+      
+      <p class="rent-total"><strong>Total Price:</strong> ₹<span id="total_price">0.00</span></p>
+    <div class="rent-button">
+      <button type="submit" class=" btn btn-warning" >Confirm Booking</button>
+    </div>
+    
+  </form>
 </div>
 
 <script>

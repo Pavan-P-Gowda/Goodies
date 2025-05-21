@@ -62,6 +62,7 @@ body{
         width: 100%;
         margin-top: 50px;
         margin-bottom: 35px;
+        /* background-color: gold; */
         .carousel-container{
             .pics{
                 margin-top: 14px;
@@ -162,8 +163,10 @@ body{
         /*  home card template ends */
         /* car detail template start */
         .detail-container{
+            border-radius: 5px;
             .detaol-row{
                 justify-items: center;
+                
                 .detail-col{
                     width: 1000px;
                     height: 500px;
@@ -179,10 +182,12 @@ body{
                     .detail-table{
                        /* width: 800px; */
                        /* background-color: rgb(198, 194, 194); */
+                       
                         th,td{
                             border: 2px solid rgb(139, 139, 139);
                             padding: 5px;
                             color: white;
+                            
                         }
                         
                     }
@@ -246,8 +251,6 @@ body{
         
         /* car delete template starts */
         .del-del{
-            /* border: 1px solid black; */
-            /* margin: auto; */
             padding: 20px;
             height: 60px;
             text-align: center;
@@ -342,12 +345,54 @@ body{
         }
         /* car lgoin templete end */
 
+        /* car rent template start */
         .rent_cart_container{
-            margin-top: 70px;
-            /* background-color: black; */
-            min-height: 80vh;
+            background-color: black;
+            margin: auto;
+            margin-top: 200px;
+            border: 1px solid black;
+            border-radius: 0px 5px;
+            width: 600px;
+            .rent-head{
+                text-align: center;
+                /* border: 1px solid white; */
+                color: white;
+            }
+            .rent-row{
+                /* text-align: start; */
+                margin-bottom: 50px;
+                margin-left: 300px;
+                /* border: 1px solid white; */
+                width: 200px;
+                /* height: 100px; */
+                color: white;
+            }
+            .rent-form{
+                .rent-lable{
+                    display: flex;
+                    justify-content: space-evenly;
+                    text-align: center;
+                    font-weight: bold;
+                    color: white;
+                    .rent-input{
+                        border: 1px solid white;
+                        height: 25px;
+                        /* width: 100px; */
+                        text-align: right;
+                    }
+                }
+                .rent-total{
+                    text-align: center;
+                    color: white;
+                }
+                .rent-button{
+                    text-align: center;
+                    margin-bottom: 5px;
+                }
+            }
 
         }
+        /* car templeate ends */
     }
 }
 

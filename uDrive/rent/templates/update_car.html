@@ -2,11 +2,12 @@
 
 
 {% block content %}
-<div class="rent_cart_container">
+<div class="rent__container">
 
     <div class="row border">
         <div class="col">
             Current car : {{curr_car.car.name}}
+            <img src="{{form.img.initial.url}}" alt="car pic" >
 
             <a href="{% url 'rentcart' curr_car.car.id %}" class="btn btn-primary">Drive this</a>
 
