@@ -210,8 +210,11 @@ body{
             padding: 25px;
             text-align: center;
             /* border: 1px solid black; */
+            width: 700px;
+            margin: auto;
             height: 80px;
             text-shadow: 4px 4px 10px rgb(145, 129, 40);
+
         }
         .ed-car{
             width: 20%;
@@ -349,23 +352,39 @@ body{
         .rent_cart_container{
             background-color: black;
             margin: auto;
-            margin-top: 200px;
+            margin-top: 150px;
             border: 1px solid black;
             border-radius: 0px 5px;
             width: 600px;
+            overflow: hidden;
+            box-shadow: 2px 2px 2px 1px rgb(145, 129, 40);
             .rent-head{
                 text-align: center;
                 /* border: 1px solid white; */
-                color: white;
+                background-color: gold
+            }
+            .rent-img{
+                border: 1px solid white;
+                width: 200px;
+                height: 200px;
+                margin: auto;
+                overflow: hidden;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
             .rent-row{
-                /* text-align: start; */
-                margin-bottom: 50px;
-                margin-left: 300px;
+                text-align: center;
+                /* margin-bottom: 250px;
+                margin-left: 250px; */
                 /* border: 1px solid white; */
-                width: 200px;
+                /* width: 200px; */
                 /* height: 100px; */
                 color: white;
+                ;
             }
             .rent-form{
                 .rent-lable{
@@ -393,6 +412,41 @@ body{
 
         }
         /* car templeate ends */
+        /* car update templeate start */
+        .update__container{
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .update-col1{
+                .update-name1{
+                    
+                }
+                .update-img1{
+                    img{
+                            
+                    }
+                }
+                .update-link{
+
+                }
+            }
+            .update-col2{
+                .update-name2{
+
+                }
+                .update-img2{
+                    img{
+
+                    }
+
+                }
+                .update-form{
+
+                }
+            }
+        }
+        /* car update templeate ends */
     }
 }
 

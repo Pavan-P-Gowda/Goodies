@@ -32,4 +32,5 @@ class CustomRegister(UserCreationForm):
         widget= forms.PasswordInput(attrs={'class':'form-control','placeholder':' Confirm password'})
     )
 
+
     

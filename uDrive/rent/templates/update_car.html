@@ -2,19 +2,28 @@
 
 
 {% block content %}
-<div class="rent__container">
+<div class="update__container">
 
-    <div class="row border">
-        <div class="col">
-            Current car : {{curr_car.car.name}}
-            <img src="{{form.img.initial.url}}" alt="car pic" >
-
-            <a href="{% url 'rentcart' curr_car.car.id %}" class="btn btn-primary">Drive this</a>
-
+    <div class="update-row">
+        <div class="update-col1">
+            <div class="update-name1">
+                Current car : {{curr_car.car.name}}
+            </div>
+            <div class="update-img1">
+                <img src="{{ curr_car.car.img.url }}" alt="Current Car Image" width="300">
+            </div>
+            <div class="update-link">
+                <a href="{% url 'rentcart' curr_car.car.id %}" class="btn btn-primary">Drive this</a>
+            </div>
         </div>
-        <div class="col">
-            Replace with : {{new_car.name}}
-            <form method="post">
+        <div class="update-col2">
+            <div class="update-name2">
+                Replace with : {{new_car.name}}
+            </div>
+            <div class="update-img2">
+                <img src="{{ new_car.img.url }}" width="300" alt="New Car">
+            </div>
+            <form method="post" class="update-form">
                 {% csrf_token %}
                 <button type="submit">Replace</button>
             </form>

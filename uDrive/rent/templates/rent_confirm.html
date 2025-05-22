@@ -12,7 +12,10 @@
   {% if error_message %}
     <p style="color: red;">{{ error_message }}</p>
   {% endif %}
-  <img src="{{form.img.initial.url}}"  class="bg-white" alt="car pic" >
+
+  <div class="rent-img">
+    <img  src="{{ item.car.img.url }}" alt="{{ item.car.name }}"  class="bg-white">
+  </div>
   <div class="rent-row">
   <p><strong>Car:</strong> {{ item.car.name }}</p>
   <p><strong>Price per day:</strong> ₹{{ price_per_day }}</p>
