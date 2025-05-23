@@ -9,26 +9,26 @@ from django.contrib.auth.decorators import login_required
 @login_required
 
 def rentView(request, car_id):
-    # item, created_at = RentItem.objects.get_or_create(user=request.user)
-    # this_car = Car.objects.get(id=car_id)
+    item, created_at = RentItem.objects.get_or_create(user=request.user)
+    this_car = Car.objects.get(id=car_id)
 
-    # if item.car:
-    #     if item.car != this_car:
-    #         return redirect('update_car', car_id)
-    # else:
-    #     item.car = this_car
+    if item.car:
+        if item.car != this_car:
+            return redirect('update_car', car_id)
+    else:
+        item.car = this_car
 
-    this_car = get_object_or_404(Car, id=car_id)
+    # this_car = get_object_or_404(Car, id=car_id)
 
-    item = RentItem.objects.filter(user=request.user, car=this_car).first()
-    if not item:
-        item = RentItem.objects.create(
-            user=request.user,
-            car=this_car,
-            price_per_day=this_car.price,
-            start_date=timezone.now().date(),  # Safe fallback
-            end_date=timezone.now().date()     # Safe fallback
-        )
+    # item = RentItem.objects.filter(user=request.user, car=this_car).first()
+    # if not item:
+    #     item = RentItem.objects.create(
+    #         user=request.user,
+    #         car=this_car,
+    #         price_per_day=this_car.price,
+    #         start_date=timezone.now().date(),  # Safe fallback
+    #         end_date=timezone.now().date()     # Safe fallback
+    #     )
 
         
 
@@ -64,7 +64,7 @@ def rentView(request, car_id):
         'item': item,
         'total': total_price,
         'error_message': error_message,
-        'price_per_day': this_car.price,
+        'price_per_day': item.car.price,
         'today': timezone.now().date().isoformat(),  # Format: 'YYYY-MM-DD'
     }
     return render(request, template, context)

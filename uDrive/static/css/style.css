@@ -352,7 +352,7 @@ body{
         .rent_cart_container{
             background-color: black;
             margin: auto;
-            margin-top: 150px;
+            margin-top: 130px;
             border: 1px solid black;
             border-radius: 0px 5px;
             width: 600px;
@@ -413,40 +413,74 @@ body{
         }
         /* car templeate ends */
         /* car update templeate start */
-        .update__container{
-            border: 1px solid black;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            .update-col1{
-                .update-name1{
-                    
-                }
-                .update-img1{
-                    img{
-                            
+        .update_container{
+            .update-row{
+                margin-top: 120px;
+                display: flex;
+                justify-content: space-between;
+                /* margin: auto; */
+                .update-col1{
+                    animation: mymove2 3s infinite;
+                    border: 1px solid black;
+                    border-radius: 0px 5px;
+                    overflow: hidden;
+                    width: 600px;
+                    margin: auto;
+                    .update-name1{
+                        text-align: center;
+                        background-color: black;
+                        color: white;
+                    }
+                    .update-img1{
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .update-link{
+                        text-align: center;
+                        a{
+                            width: 100%;
+                            border-radius: 0px;
+                            border: 2px solid black;
+                        }
                     }
                 }
-                .update-link{
-
-                }
-            }
-            .update-col2{
-                .update-name2{
-
-                }
-                .update-img2{
-                    img{
-
+                .update-col2{
+                    border: 1px solid black;
+                    animation: mymove 3s infinite;
+                    border-radius: 0px 5px;
+                    overflow: hidden;
+                    width: 600px;
+                    margin: auto;
+                    .update-name2{
+                        background-color: black;
+                        text-align: center;
+                        color:white;
                     }
-
-                }
-                .update-form{
-
+                    .update-img2{
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .update-form{
+                        text-align: center;
+                        
+                        button{
+                            height: 38px;
+                            width: 100%;
+                            background-color: gold;
+                            border: 2px solid black;
+                        }
+                    }
                 }
             }
+
         }
-        /* car update templeate ends */
+        /* car update templeate end */
     }
 }
 
@@ -455,3 +489,14 @@ body{
     overflow: hidden;
 }
 
+@keyframes mymove {
+  0%   { transform:scale(1.0); filter: blur(0.5px) saturate(100%); }
+  50%  { transform:scale(1.01); filter: blur(0) saturate(100%);}
+  100% { transform:scale(1.0); filter: blur(0.5px) saturate(100%);}
+}
+
+@keyframes mymove2 {
+  0%   { transform:scale(1.01); filter: blur(0) saturate(100%);}
+  50%  { transform:scale(1.0); filter: blur(0.5px) saturate(100%); }
+  100% { transform:scale(1.01); filter: blur(0) saturate(100%);}
+}
