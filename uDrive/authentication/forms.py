@@ -6,6 +6,8 @@ from django import forms
 # importing authentication forms inbuilt authentication
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 
+from .models import UserProfile
+
 class CustomLogin(AuthenticationForm):
     username = forms.CharField(
         widget= forms.TextInput(attrs={'class':'form-control','placeholder':'Enter your name'})
@@ -32,5 +34,8 @@ class CustomRegister(UserCreationForm):
         widget= forms.PasswordInput(attrs={'class':'form-control','placeholder':' Confirm password'})
     )
 
-
+class UserProfileForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ['driving_license', 'license_file', 'phone_number', 'address']
     

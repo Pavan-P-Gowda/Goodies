@@ -29,12 +29,6 @@ Register
                     {% if form.non_field_errors %}
                 <div class="text-info">{{ form.non_field_errors }}</div>
                     {% endif %}
-                    <div>
-                        <h6 class="log-text">
-                        New here?
-                        <a href="{% url 'signup'%}">Sign up</a>
-                        </h6>
-                    </div>
                 <button type="submit" class="btn btn-warning center">Register</button>
             </form>
         </div>

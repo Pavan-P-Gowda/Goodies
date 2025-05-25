@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+View profile
+{% endblock %}
+{% block content %}
+<div class="view-profile">
+    <h2>{{ profile.user.username }}'s Profile</h2>
+    <p><strong>Driving License:</strong> {{ profile.driving_license }}</p>
+    <p><strong>Phone Number:</strong> {{ profile.phone_number }}</p>
+    <p><strong>Address:</strong> {{ profile.address }}</p>
+    {% if profile.license_file %}
+        <p><strong>License File:</strong> <a href="{{ profile.license_file.url }}">Download</a></p>
+{% endif %}
+
+
+</div>
+{% endblock %}
