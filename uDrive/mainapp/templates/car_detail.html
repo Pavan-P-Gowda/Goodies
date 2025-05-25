@@ -10,45 +10,47 @@ U-Drive|Details
     <div class="detaol-row">
         <div class="detail-col">
             <img src="{{car.img.url}}"  alt="">
-            <table class="detail-table bg-dark ">
-                <tr>
-                    <th>Name</th>
-                    <td>{{car.name}} </td>
-                </tr>
-                <tr>
-                    <th>Price</th>
-                    <td> Rs.{{car.price}} </td>
-                </tr>
-                <tr>
-                    <th>Fuel</th>
-                    <td>{{car.fuel}} </td>
-                </tr>
-                <tr>
-                    <th>Desc</th>
-                    <td>{{car.desc}} </td>
-                </tr>
-                <tr>
-                    <th>Driving Type</th>
-                    <td>{{car.transmission}} </td>
-                </tr>
-                <tr>
-                    <th>Seat</th>
-                    <td>{{car.seat}} </td>
-                </tr>
-                <tr>
-                    <th>MOY</th>
-                    <td>{{car.year}} </td>
-                </tr>
-            </table>
-            <p class="detail-button">
-                <a href="{% url 'car_edit' car.pk  %}" class="btn btn-secondary  center">Edit cars</a>
-                <a href="{% url 'delete_car' car.pk %}" class="btn btn-danger center">Delete </a>
-                <a href="{% url 'rentcart' car.pk %}" class="btn btn-warning  center ">Rent</a>
-                <!-- <a href="{% url 'car_detail' car.pk %}" class="btn btn-success center">Go Back</a> -->
-            </p>
+            
         </div>
-        
+        <div class="detail-tab">
+                <table class="detail-table bg-dark ">
+                    <tr>
+                        <th>Name</th>
+                        <td>{{car.name}} </td>
+                    </tr>
+                    <tr>
+                        <th>Price</th>
+                        <td> Rs.{{car.price}} </td>
+                    </tr>
+                    <tr>
+                        <th>Fuel</th>
+                        <td>{{car.fuel}} </td>
+                    </tr>
+                    <tr>
+                        <th>Desc</th>
+                        <td>{{car.desc}} </td>
+                    </tr>
+                    <tr>
+                        <th>Driving Type</th>
+                        <td>{{car.transmission}} </td>
+                    </tr>
+                    <tr>
+                        <th>Seat</th>
+                        <td>{{car.seat}} </td>
+                    </tr>
+                    <tr>
+                        <th>MOY</th>
+                        <td>{{car.year}} </td>
+                    </tr>
+                </table>
+        </div>
+            
+            
     </div>
-
+    <p class="detail-button">
+        <!-- <a href="{% url 'car_edit' car.pk  %}" class="btn btn-secondary  center">Edit cars</a>
+        <a href="{% url 'delete_car' car.pk %}" class="btn btn-danger center">Delete </a> -->
+        <a href="{% url 'rentcart' car.pk %}" class="btn btn-warning  center ">Rent</a>
+     </p>
 </div>
 {% endblock %}
