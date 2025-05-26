@@ -505,24 +505,28 @@ body{
         }
         /* car update templeate end */
 
-        /* car profile create template start */
+        /* car profile create and edit template start */
         .create-profile{
             border: 1px solid black;
             width: 380px;
-            margin-top: 15vh;
-            margin-left: 80vh;
+            margin-top: 100px;
+            margin-left: 600px;
             border-radius: 5px;
+            overflow: hidden;
             background-color: black;
             box-shadow: 2px 2px 2px 1px rgb(145, 129, 40) ;
-            .profile-head{
-                color: white;
-                text-shadow: 4px 4px 10px rgb(145, 129, 40);
-            }
             .create-pro{
-                margin: auto;
+                background-color: black;
+                .profile-head{
+                    text-shadow: 5px 5px 10px rgb(145, 129, 40);
+                    .profile-text{
+                        color: white;
+                    }
+                }
                 .from-profile{
-                    color: white;
-                    opacity: 90%;
+                    .profile-info{
+                        color: white;
+                    }
                     .button-profile{
                         width: 100%;
                         height: 40px;

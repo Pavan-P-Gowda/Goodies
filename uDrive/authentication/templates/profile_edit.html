@@ -6,13 +6,20 @@ edit profile
 {% block content %}
 
 <div class="create-profile">
-    <h2 class="text-center profile-head">Edit Profile</h2>
+    <!-- <img src="{% static 'image/carouasel/img1.jpg' %}" alt="Logo" > -->
+    
     <div class="create-pro">
-        <form method="POST" class="from-profile" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="text-bg-warning button-profile">Save Changes</button>
-        </form>
+        <div class="profile-head">
+            <h2 class="text-center profile-text">Edit Profile</h2>
+        </div>
+        <div class="from-profile">
+            <form method="POST" class="profile-info" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="text-bg-warning button-profile">Save Changes</button>
+            </form>
+        </div>
+        
     </div>
 </div>
 
