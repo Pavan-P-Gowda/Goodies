@@ -1,7 +1,8 @@
 from django.db import models
 
 from django.contrib.auth.models import User
-# Create your models here.
+
+# Create your models here.cd 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     driving_license = models.CharField(max_length=100)

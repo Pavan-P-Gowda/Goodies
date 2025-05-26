@@ -43,9 +43,6 @@
                     <li class="nav-item">
                       <a class="nav-link {% if current_page == 'contact' %} text-warning {% endif %}" href="{% url 'contactpage' %}">Contact</a>
                     </li>
-                    <!-- <li class="nav-item">
-                      <a class="nav-link active" href="{% url 'view_profile' %}">Profile</a>
-                    </li> -->
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                       <form action="{% url 'logout' %}" method="post">

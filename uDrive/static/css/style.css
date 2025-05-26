@@ -538,6 +538,30 @@ body{
             }
         }
         /* car profile create template end */
+
+        /* car profile view template start */
+        .view-per{
+            /* border: 1px solid black; */
+            margin-top: 130px;
+            text-shadow: 5px 5px 10px rgb(145, 129, 40);
+        }
+        .view-profile{
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+            width: 380px;
+            margin: auto;
+            margin-top: 25px;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .edit-button{
+            margin: auto;
+            margin-top: 20px;
+            width: 10%;
+        }
+        /* car profile view template ends */
     }
 }
 
