@@ -5,12 +5,16 @@ edit profile
 {% endblock %}
 {% block content %}
 
+<div class="create-profile">
+    <h2 class="text-center profile-head">Edit Profile</h2>
+    <div class="create-pro">
+        <form method="POST" class="from-profile" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="text-bg-warning button-profile">Save Changes</button>
+        </form>
+    </div>
+</div>
 
-<h2>Edit Profile</h2>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save</button>
-</form>
 
 {% endblock %}

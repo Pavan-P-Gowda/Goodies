@@ -359,6 +359,7 @@ body{
                     background: black;
                     .log-text{
                         color: white;
+                        text-shadow: 4px 4px 10px rgb(145, 129, 40);
                     }
                     .log-name{
                         color: white;
@@ -404,11 +405,6 @@ body{
             }
             .rent-row{
                 text-align: center;
-                /* margin-bottom: 250px;
-                margin-left: 250px; */
-                /* border: 1px solid white; */
-                /* width: 200px; */
-                /* height: 100px; */
                 color: white;
                 ;
             }
@@ -438,6 +434,7 @@ body{
 
         }
         /* car templeate ends */
+
         /* car update templeate start */
         .update_container{
             .update-row{
@@ -507,6 +504,36 @@ body{
 
         }
         /* car update templeate end */
+
+        /* car profile create template start */
+        .create-profile{
+            border: 1px solid black;
+            width: 380px;
+            margin-top: 15vh;
+            margin-left: 80vh;
+            border-radius: 5px;
+            background-color: black;
+            box-shadow: 2px 2px 2px 1px rgb(145, 129, 40) ;
+            .profile-head{
+                color: white;
+                text-shadow: 4px 4px 10px rgb(145, 129, 40);
+            }
+            .create-pro{
+                margin: auto;
+                .from-profile{
+                    color: white;
+                    opacity: 90%;
+                    .button-profile{
+                        width: 100%;
+                        height: 40px;
+                        border: 2px solid black;
+                        border-radius: 5px;
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
+        /* car profile create template end */
     }
 }
 

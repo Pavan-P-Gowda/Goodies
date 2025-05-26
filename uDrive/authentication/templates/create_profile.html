@@ -5,12 +5,15 @@ Create profile
 {% endblock %}
 {% block content %}
 <div class="create-profile">
-    <h2>Create Profile</h2>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Save Profile</button>
-    </form>
+    <h2 class="text-center profile-head">Create Profile</h2>
+    <div class="create-pro">
+        <form method="post " class="from-profile" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="text-bg-warning button-profile">Save Profile</button>
+        </form>
+    </div>
+    
 
 </div>
 {% endblock %}
