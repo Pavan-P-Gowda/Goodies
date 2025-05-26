@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 from django.urls import reverse_lazy
 
 # now we r importing inbuilt user regestertation from class
-from .forms import CustomLogin, CustomRegister, UserProfileForm
+from .forms import CustomLogin, CustomRegister, UserProfileForm, UserEditForm
 
 # importing inbuilt user loginview to inherate and over view the template
 from django.contrib.auth.views import LoginView
@@ -53,7 +53,13 @@ def view_profile(request):
 @login_required
 def profile_check(request):
     if hasattr(request.user,'userprofile'):
-        return redirect('view_profile')
+        return redirect('homepage')
     else:
         return redirect('create_profile')
 
+class ProfileEdit(UpdateView):
+    model = UserProfile
+    context_object_name = 'UserProfile'
+    template_name = "profile_edit.html"
+    form_class = UserEditForm
+    success_url = '/'

@@ -38,4 +38,10 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ['driving_license', 'license_file', 'phone_number', 'address']
+
+class UserEditForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ['driving_license', 'license_file', 'phone_number', 'address']
+
     

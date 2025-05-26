@@ -12,6 +12,7 @@ View profile
     {% if profile.license_file %}
         <p><strong>License File:</strong> <a href="{{ profile.license_file.url }}">Download</a></p>
 {% endif %}
+<p><a href="{% url 'edit_profile' profile.id     %}">edit</a></p>
 
 
 </div>
