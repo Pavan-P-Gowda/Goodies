@@ -10,9 +10,25 @@ Create profile
             <h2 class="text-center profile-text ">Create Profile</h2>
         </div>
         <div class="from-profile">
-            <form method="post " class="profile-info" enctype="multipart/form-data">
+            <form method="post " class="profile-info " enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form.as_p }}
+                {% for field in form %}
+                <div class="mb-3 row">
+                <!-- <div class="log-name"><strong>{{ field.name }}:</strong></div> -->
+                    <label for="{{field.id_for_label}}" class="form-label text-light col-4">{{field.label}}</label>
+                    <div class="col-6">
+                        {{field}}
+                    </div>
+                    {% if field.errors %}
+                    <div class="text-danger small">
+                        {{field.errors | striptags}}
+                    </div>
+                    {% endif %}
+                </div>
+                    {% endfor %}
+                    {% if form.non_field_errors %}
+                <div class="text-info">{{ form.non_field_errors }}</div>
+                    {% endif %}
                 <button type="submit" class="text-bg-warning button-profile">Save Profile</button>
             </form>
         </div>
