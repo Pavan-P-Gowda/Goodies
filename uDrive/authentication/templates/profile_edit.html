@@ -15,7 +15,22 @@ edit profile
         <div class="from-profile">
             <form method="POST" class="profile-info" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form.as_p }}
+                {% for field in form %}
+                <div class="mb-2 row">
+                    <label for="{{field.id_for_label}} " class="form-label text-light col-4 ">{{field.label}}</label>:
+                    <div class="col-7 ">
+                        {{field}}
+                    </div>
+                    {% if field.errors %}
+                    <div class="text-danger small">
+                        {{field.errors | striptags}}
+                    </div>
+                    {% endif %}
+                </div>
+                    {% endfor %}
+                    {% if form.non_field_errors %}
+                <div class="text-info">{{ form.non_field_errors }}</div>
+                    {% endif %}
                 <button type="submit" class="text-bg-warning button-profile">Save Changes</button>
             </form>
         </div>

@@ -17,22 +17,22 @@
     <img  src="{{ item.car.img.url }}" alt="{{ item.car.name }}"  class="bg-white">
   </div>
   <div class="rent-row">
-  <p><strong>Car:</strong> {{ item.car.name }}</p>
-  <p><strong>Price per day:</strong> ₹{{ price_per_day }}</p>
+  <p><strong>Car <b class="text-warning">:</b></strong> {{ item.car.name }}</p>
+  <p><strong>Price per day <b class="text-warning">:</b></strong> ₹{{ price_per_day }}</p>
   </div>
   
 
   <form method="post" class="rent-form">
     {% csrf_token %}
     <div class="rent-lable">
-      <label for="start_date">Start Date:</label><br>
+      <label for="start_date">Start Date <b class="text-warning">:</b></label><br>
       <input class="rent-input" type="date" id="start_date" name="start_date" required min="{{ today }}"><br><br>
 
-      <label for="end_date">End Date:</label><br>
+      <label for="end_date">End Date <b class="text-warning">:</b></label><br>
       <input class="rent-input" type="date" id="end_date" name="end_date" required min="{{ today }}"><br><br>
     </div>
       
-      <p class="rent-total"><strong>Total Price:</strong> ₹<span id="total_price">0.00</span></p>
+      <p class="rent-total"><strong>Total Price <b class="text-warning">:</b></strong> ₹<span id="total_price">0.00</span></p>
     <div class="rent-button">
       <button type="submit" class=" btn btn-warning" >Confirm Booking</button>
     </div>
