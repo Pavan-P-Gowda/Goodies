@@ -11,7 +11,7 @@ View profile
     <p><strong>Phone Number <b class="text-warning">:</b> </strong> {{ profile.phone_number }}</p>
     <p><strong>Address <b class="text-warning">:</b></strong> {{ profile.address }}</p>
     {% if profile.license_file %}
-        <p><strong>License File <b class="text-warning">:</b></strong> <a href="{{ profile.license_file.url }}">Download</a></p>
+        <p><strong>License File <b class="text-warning">:</b></strong> <a href="{{ profile.license_file.url }} " class=" btn btn-outline-warning">Download</a></p>
     {% endif %}
 </div>
 <p class="edit-button text-center  "><a href="{% url 'edit_profile' profile.id %}" class="text-decoration-none text-black btn btn-secondary btn btn-outline-warning w-100"><b>Edit</b></a></p>

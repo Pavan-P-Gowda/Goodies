@@ -93,6 +93,7 @@ body{
                 justify-content: space-between;
                 margin-bottom: 25px;
                 .card{
+                    border: 1px solid gold;
                     box-shadow: 2px 2px 2px 1px rgb(145, 129, 40);
                     background-color: black;
                     width: 250px;
@@ -541,13 +542,14 @@ body{
 
         /* car profile view template start */
         .view-per{
-            /* border: 1px solid black; */
+            /* border: 1px solid gold; */
             margin-top: 130px;
             text-shadow: 5px 5px 10px rgb(145, 129, 40);
         }
         .view-profile{
-            border: 1px solid black;
+            border: 1px solid gold;
             background-color: black;
+            box-shadow: 2px 2px 2px 1px rgb(145, 129, 40) ;
             color: white;
             width: 380px;
             margin: auto;
