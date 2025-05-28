@@ -34,7 +34,11 @@
       
       <p class="rent-total"><strong>Total Price <b class="text-warning">:</b></strong> ₹<span id="total_price">0.00</span></p>
     <div class="rent-button">
-      <button type="submit" class=" btn btn-warning" >Confirm Booking</button>
+      <a href="{% url 'success_page' booking.pk %}">
+        <button type="submit" class=" btn btn-warning" >Confirm Booking</button>
+      </a>
+      
+       
     </div>
     
   </form>
