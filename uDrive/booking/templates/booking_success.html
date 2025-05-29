@@ -15,7 +15,7 @@
     <p><strong>Status:</strong> {{ booking.status }}</p>
 
     {% if booking.status == 'pending' %}
-        <a href="{% url 'payment:start_payment' booking.id %}">
+        <a href="">
             <button>Pay Now</button>
         </a>
     {% else %}

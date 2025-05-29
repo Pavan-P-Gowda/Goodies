@@ -51,7 +51,7 @@ def rentView(request, car_id):
                 item.start_date = start_date
                 item.end_date = end_date
                 item.save()
-                return redirect('homepage')  # Redirect to confirmation/payment
+                return redirect('booking:create_booking')  # Redirect to confirmation/payment
 
         except ValueError:
             error_message = "Invalid date format."

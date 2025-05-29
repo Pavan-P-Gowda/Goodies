@@ -15,7 +15,8 @@ class RentItem(models.Model):
     def total_price(self):
         if self.start_date and self.end_date:
             days = (self.end_date - self.start_date).days
+            print(f"No. of days : ", days)
             if days <= 0:
-                return 0
+                return self.car.price
             return days * self.car.price  # or price_per_day if your Car model has it
         return 0

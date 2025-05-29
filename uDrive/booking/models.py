@@ -20,10 +20,3 @@ class Booking(models.Model):
     def __str__(self):
         return f"Booking #{self.id} by {self.user.username}"
 
-class BookingHistory(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    booking = models.ForeignKey(Booking, on_delete=models.SET_NULL, null=True)
-    timestamp = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f"History for {self.user.username} - Booking #{self.booking.id if self.booking else 'N/A'}"

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Confirm Booking
+{% endblock %}
+
+{% block content %}
+<div class="">
+    <br><br><br>
+    Hi {{user.username}}, Please confirm that you have booked a {{car.name}} for a total cost of {{booking.total_cost}}!!!
+
+    <a href="{% url 'payment:create_razorpay_order' booking.id %}">Pay now</a>
+    
+</div>
+{% endblock %}

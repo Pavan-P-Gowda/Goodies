@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+{{ item.car.name }} Rent Cart
+{% endblock %}
+
+{% block content %}
+<div class="book-succ">
+    <br><br><br>
+    {% for booking in bookings %}
+    <br>
+    {{booking.id}} - {{booking.user.username}} - {{booking.car.name}} - {{booking.status}} - {{booking.total_cost}}
+    {% if booking.status == 'pending' %}
+    <a href="{% url 'payment:create_razorpay_order' booking.id %}">Pay now</a>
+    {% else %}
+    - <a href="{% url 'rentcart' booking.car.id %}">Rent again</a>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}
