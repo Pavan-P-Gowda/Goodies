@@ -6,11 +6,21 @@ Confirm Booking
 {% endblock %}
 
 {% block content %}
-<div class="">
-    <br><br><br>
-    Hi {{user.username}}, Please confirm that you have booked a {{car.name}} for a total cost of {{booking.total_cost}}!!!
+<p class="p-book" ><b>Conformation Details</b></p>
+<div class="com-book">
+    
+    <div class="img-book">
+        <img src="{{car.img.url}}"  alt="" >
+    </div>
+    <div class="comm-book">
+        Hi <b>{{user.username}}</b><b class="text-warning">, </b>Please confirm that you have booked Car <br> 
+        <b>Name</b> <b class="text-warning">: </b>{{car.name}} <br> 
+        <b>Total cost</b> <b class="text-warning">: </b> {{booking.total_cost}} <br>
+        <b>Date</b> <b class="text-warning">: </b> {{booking.start_date}} <b class="text-warning">To</b>  {{booking.end_date}}
 
-    <a href="{% url 'payment:create_razorpay_order' booking.id %}">Pay now</a>
+    </div>
+    
+    <a href="{% url 'payment:create_razorpay_order' booking.id %}" class=" a-book text-decoration-none btn btn-warning">Pay now</a>
     
 </div>
 {% endblock %}

@@ -5,13 +5,13 @@ Shoopy | Search for the {{query}}
 {% endblock %}
 
 {% block content %}
-<span>This page is searched for {{query}}</span>
+<p class="p-search">This page is searched for {{query}} :</p>
 <section id="car-body">
   <div class="cars-container">
     {% for car in cars %}
     {% include 'includes/product_card.html' %}
     {% empty %}
-    <span>You enter wrongly : Please check</span>
+    <p class="p-empty">You enter wrongly : Please check</p>
     {% endfor %}
   </div>
 </section>

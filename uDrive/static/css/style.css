@@ -623,6 +623,55 @@ body{
             }
         }
         /* car pay history end */
+        /* car bookingconform start */
+        .p-book{
+                text-align: center;
+                margin-top: 70px;
+                font-size: xx-large;
+                text-shadow: 5px 5px 10px rgb(145, 129, 40);
+            }
+        .com-book{
+            border: 1px solid black;
+            background-color: black;
+            width: 500px;
+            overflow: hidden;
+            margin: auto;
+            border-radius: 0px 5px;
+            .img-book{
+                width: 500px;
+                height: 300px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .comm-book{
+                text-align: center;
+                color: white;
+            }
+            .a-book{
+                width: 100%;
+                border-radius: 0px;
+                
+            }
+        }
+        /* car booking conform end */
+        /* car search start */
+        .p-search{
+            /* border: 1px solid black; */
+            margin-top: 100px;
+            font-size: xx-large;
+            font-weight: bolder;
+            padding: 10px;
+        }
+        .p-empty{
+            border: 1px solid black;
+            margin-top: 100px;
+            animation: mymove3 1s infinite;
+        }
+        /* car search ends */
     }
 }
 
@@ -641,4 +690,12 @@ body{
   0%   { transform:scale(1.01); filter: blur(0) ;}
   50%  { transform:scale(1.0); filter: blur(0.5px) ; }
   100% { transform:scale(1.01); filter: blur(0) ;}
+}
+
+@keyframes mymove3 {
+  0%   { transform:scale(2.0); }
+  50%  { transform:scale(2.01);}
+  100% { transform:scale(2.0); }
+  from {background-color:white;}
+  to {background-color: red;}
 }
