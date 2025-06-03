@@ -25,7 +25,7 @@ class UserLogin(LoginView):
 @login_required
 def create_profile(request):
     if hasattr(request.user,'userprofile'):
-        return redirect('view_profile')
+        return redirect('homepage')
     
     if request.method == 'POST':
         form = UserProfileForm(request.POST, request.FILES)
@@ -33,8 +33,12 @@ def create_profile(request):
             profile = form.save(commit=False)
             profile.user = request.user
             profile.save()
+            print(profile.user.username)
             return redirect('view_profile')
+        else:
+            print("Form invalid")
     else:
+        print("Get request")
         form = UserProfileForm()
 
     return render(request,'create_profile.html',{'form': form})

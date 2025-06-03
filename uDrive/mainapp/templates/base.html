@@ -40,7 +40,7 @@
                       <a class="nav-link {% if current_page == 'about' %} text-warning {% endif %}" aria-current="page" href="{% url 'aboutpage' %}">About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link {% if current_page == 'contact' %} text-warning {% endif %}" href="{% url 'contactpage' %}">Contact</a>
+                      <!-- <a class="nav-link {% if current_page == 'contact' %} text-warning {% endif %}" href="{% url 'contactpage' %}">Contact</a> -->
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -49,14 +49,17 @@
                         <button type="submit" class="nav-link text-white">Logout</button>
                       </form>
                     </li>
-                    {% endif %}
+                    {% if user.is_staff %}
                     <li class="nav-item">
                       <a class="nav-link" href="{% url 'add_car' %}">Add Cars</a>
                     </li>
+                    {% endif %}
+
+                    {% endif %}
                     <li class="nva-item">
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
+                        More
                       </a>
                       <ul class="dropdown-menu dropdown-menu-dark">
                         <li><a class="dropdown-item" href="{% url 'booking:history' %}">Past Booking</a></li>
@@ -75,11 +78,12 @@
 
               <a class="nav-link btn log-in text-light" aria-current="page" href="{% url 'signin' %}">Login</a>
               {% endif %}
-
-              <form class="d-flex mt-3 sele" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class=" sea" type="submit">Search</button>
+              {% if search_bar %}
+              <form class="d-flex mt-3 sele" role="search" method="get" action="{% url 'search' %}">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name ="search_text" value="{{query}}">
+                <button class=" btn btn-warning" type="submit">Search</button>
               </form>
+              {% endif %}
             </div>
           </nav>
     </header>

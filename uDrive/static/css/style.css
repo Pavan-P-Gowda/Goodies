@@ -88,10 +88,9 @@ body{
                 /* display: grid;
                 width: 100%;
                 grid-template-columns: 300px 300px 300px 300px; */
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: space-between;
+                display: grid;
+                grid-template-columns: auto auto auto auto auto;
+                justify-content: center;
                 margin-bottom: 25px;
                 .card{
                     border: 1px solid gold;

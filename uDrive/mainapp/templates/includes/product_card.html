@@ -14,8 +14,11 @@
                 <p class="card-see">
                   <a href="{% url 'car_detail' car.id %}">View Detail</a>
                 </p>
-
-                <a href="{% url 'rentcart' car.pk %}" class="btn btn-warning  center ">Rent</a>
+                {% if user.is_staff %}
+                <a href="{% url 'car_edit' car.pk  %}" class="btn btn-warning center">Edit cars</a>
+                {% else %}
+                <a href="{% url 'rentcart' car.pk %}" class="btn btn-warning center ">Rent</a>
+                {% endif %}
               </div>
               
             </div>

@@ -13,7 +13,8 @@ def home(request):
     template= loader.get_template('home.html')
     context ={
         'cars': Car.objects.all(),
-        'current_page' : 'home'
+        'current_page' : 'home',
+        'search_bar' : True
     }
     return HttpResponse(template.render(context,request))
 
@@ -53,3 +54,15 @@ class CarDelete(DeleteView):
     model = Car
     template_name = 'delete_car.html'
     success_url = '/'
+
+def SearchView(request):
+    query = request.GET.get('search_text')
+
+    result_car = Car.objects.filter(name__icontains = query)
+    context = {
+        'cars' : result_car,
+        'query' : query,
+        'search_bar' : True
+    }
+    template = loader.get_template('search_result.html')
+    return HttpResponse(template.render(context,request))

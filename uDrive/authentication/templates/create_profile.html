@@ -10,7 +10,7 @@ Create profile
             <h2 class="text-center profile-text ">Create Profile</h2>
         </div>
         <div class="from-profile">
-            <form method="post " class="profile-info " enctype="multipart/form-data">
+            <form method="post" class="profile-info " enctype="multipart/form-data">
                 {% csrf_token %}
                 {% for field in form %}
                 <div class="mb-3 row">
