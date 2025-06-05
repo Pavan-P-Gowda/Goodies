@@ -35,7 +35,8 @@
     <div class="container my-5">
         <div class="checkout-card">
             <h1 class="text-center">Checkout</h1>
-            <p class="text-center">Dear {{ user.username }}, please confirm your order details and proceed with payment.</p>
+            <p class="text-center">Dear {{ user.username.capitalize }}, please confirm your order details and proceed with payment.</p>
+            <p class="text-center text-warning">Do not go back or quit this page.</p>
             
             <!-- Order Details -->
             <div class="order-details mb-4">

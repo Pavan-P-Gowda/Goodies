@@ -9,7 +9,7 @@
 <div class="book-succ">
     <p class="text-center boo-p"> <b>Booking history</b></p>
     <!-- <br><br><br> -->
-    {% for booking in bookings %}
+    
         <table class="table-succ">
             <thead class="text-warning">
                 <th>Sl.no</th>
@@ -22,6 +22,7 @@
                 <th>Date and timing</th>
             </thead>
             <tbody>
+                {% for booking in bookings %}
                 <tr >
                     <td>{{booking.id}}</td>
                     <td>{{booking.user.username}}</td>
@@ -39,8 +40,9 @@
                     </td>
                     <td>{{booking.created_at}}</td>
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
-    {% endfor %}
+    
 </div>
 {% endblock %}

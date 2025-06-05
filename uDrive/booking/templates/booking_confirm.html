@@ -6,7 +6,7 @@ Confirm Booking
 {% endblock %}
 
 {% block content %}
-<p class="p-book" ><b>Conformation Details</b></p>
+<p class="p-book" ><b>Confirmation Details</b></p>
 <div class="com-book">
     
     <div class="img-book">
@@ -16,7 +16,12 @@ Confirm Booking
         Hi <b>{{user.username}}</b><b class="text-warning">, </b>Please confirm that you have booked Car <br> 
         <b>Name</b> <b class="text-warning">: </b>{{car.name}} <br> 
         <b>Total cost</b> <b class="text-warning">: </b> {{booking.total_cost}} <br>
-        <b>Date</b> <b class="text-warning">: </b> {{booking.start_date}} <b class="text-warning">To</b>  {{booking.end_date}}
+        <b>Date</b> <b class="text-warning">: 
+            {% if booking.start_date == booking.end_date %}
+                </b> {{booking.start_date}}</b>
+            {% else %}
+                </b> {{booking.start_date}} <b class="text-warning">To</b>  {{booking.end_date}}
+            {% endif %}
 
     </div>
     
