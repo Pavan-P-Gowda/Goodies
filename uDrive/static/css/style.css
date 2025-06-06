@@ -453,8 +453,16 @@ body{
                     overflow: hidden;
                     width: 600px;
                     margin: auto;
+                    position: relative;
                     .update-name1{
                         text-align: center;
+                        background-color: black;
+                        color: white;
+                    }
+                    .update-price1{
+                        position: absolute;
+                        top: 86%;
+                        left: 40%;
                         background-color: black;
                         color: white;
                     }
@@ -482,10 +490,18 @@ body{
                     overflow: hidden;
                     width: 600px;
                     margin: auto;
+                    position: relative;
                     .update-name2{
                         background-color: black;
                         text-align: center;
                         color:white;
+                    }
+                    .update-price2{
+                        position: absolute;
+                        top: 86%;
+                        left: 40%;
+                        background-color: black;
+                        color: white;
                     }
                     .update-img2{
                         overflow: hidden;

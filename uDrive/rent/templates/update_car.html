@@ -9,6 +9,9 @@
             <div class="update-name1">
                 <b class="text-warning" height="100">Current car</b> : <b>{{curr_car.car.name}}</b>
             </div>
+            <div class="update-price1">
+                <b>Price</b> : <b>{{curr_car.car.price}}</b>
+            </div>
             <div class="update-img1">
                 <img src="{{ curr_car.car.img.url }}" alt="Current Car Image" width="300" height="400">
             </div>
@@ -19,6 +22,9 @@
         <div class="update-col2">
             <div class="update-name2">
                 <b class="text-warning">Replace with</b> : <b>{{new_car.name}}</b> 
+            </div>
+            <div class="update-price2">
+                <b>Price</b> : <b>{{new_car.price}}</b>
             </div>
             <div class="update-img2">
                 <img src="{{ new_car.img.url }}" width="300" height="400" alt="New Car">
