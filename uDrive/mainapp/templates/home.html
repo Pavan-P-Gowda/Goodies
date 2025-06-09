@@ -9,7 +9,7 @@ U-Drive|home
   <div id="carouselExample" class="carousel slide w-100" data-bs-ride="carousel">
     <div class="carousel-inner ">
       {% for car in cars %}
-      <div class="carousel-item  {% if forloop.first %}active{% endif %} pics" data-bs-interval="50000">
+      <div class="carousel-item  {% if forloop.first %}active{% endif %} pics" data-bs-interval="7000">
         <a href="{% url 'car_detail' car.id %}">
           <img src="{{car.img.url}}" class="d-block w-100" alt="...">
           <div class="carousel-caption  d-none d-md-block">
