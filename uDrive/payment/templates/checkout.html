@@ -32,32 +32,32 @@
     </style>
 </head>
 <body>
-    <div class="container my-5">
-        <div class="checkout-card">
-            <h1 class="text-center">Checkout</h1>
-            <p class="text-center">Dear {{ user.username.capitalize }}, please confirm your order details and proceed with payment.</p>
+    <div class="container my-5 ">
+        <div class="checkout-card bg-dark">
+            <h1 class="text-center text-white">Checkout</h1>
+            <p class="text-center text-white">Dear {{ user.username.capitalize }}, please confirm your order details and proceed with payment.</p>
             <p class="text-center text-warning">Do not go back or quit this page.</p>
             
             <!-- Order Details -->
-            <div class="order-details mb-4">
+            <div class="order-details mb-4 text-white">
                 <h4 class="text-center">Order Details</h4>
-                <p><strong>Order ID:</strong> {{ order.id }}</p>
-                <p><strong>Total Amount:</strong> ₹{{ order.total_cost }}</p>
+                <p><strong>Order ID <b class="text-warning">:</b></strong> {{ order.id }}</p>
+                <p><strong>Total Amount <b class="text-warning">:</b></strong> ₹{{ order.total_cost }}</p>
             </div>
             
             <!-- Shipping Address -->
             <!--  -->
 
             <!-- Payment Section -->
-            <h4>Payment</h4>
-            <form id="payment-form" method="post" action="{% url 'payment:payment_success' %}">
+            <h4 class="text-white">Payment <b class="text-warning">:</b></h4>
+            <form id="payment-form" method="post"   action="{% url 'payment:payment_success' %}">
                 {% csrf_token %}
-                <script src="https://checkout.razorpay.com/v1/checkout.js"
+                <script src="https://checkout.razorpay.com/v1/checkout.js" 
                         data-key="{{ key_id }}"
                         data-amount="{{ razorpay_order.amount }}"
                         data-currency="{{ razorpay_order.currency }}"
                         data-order_id="{{ razorpay_order.id }}"
-                        data-buttontext="Pay Now"
+                        data-buttontext= "Pay Now  "
                         data-name="My Shopping Site"
                         data-description="Order Payment"
                         data-theme.color="#F37254">
@@ -67,7 +67,7 @@
             </form>
 
             <!-- Cancel Order Section -->
-            <hr>
+            <hr class="text-white">
             <form method="post" action="{% url 'booking:booking_cancel' order.id %}">
                 {% csrf_token %}
                 <button type="submit" class="btn cancel-btn w-100 mt-3">Cancel Booking</button>
